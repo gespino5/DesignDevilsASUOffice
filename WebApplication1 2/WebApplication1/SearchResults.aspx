@@ -8,7 +8,7 @@
         <asp:SqlDataSource ID="new" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" ProviderName="<%$ ConnectionStrings:ConnectionString2.ProviderName %>" SelectCommand="SELECT ID, Name, Description, Price FROM product"></asp:SqlDataSource>
     </p>
     <p>
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" DataSourceID="new" ForeColor="#333333" GridLines="None">
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
             <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
