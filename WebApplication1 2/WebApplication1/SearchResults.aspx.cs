@@ -28,14 +28,7 @@ namespace WebApplication1
         BindingList<Product> selectedItems;
 
         ShoppingCart tmpCart;
-
-        MySqlConnection con;
-        MySqlCommand command;
-        MySqlDataAdapter adapter;
-        DataTable table;
-        MySqlCommandBuilder commandBuilder;
-        DataSet dataset;
-
+        
 
         string sValue;
 
