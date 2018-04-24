@@ -8,7 +8,7 @@
         <asp:SqlDataSource ID="new" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" ProviderName="<%$ ConnectionStrings:ConnectionString2.ProviderName %>" SelectCommand="SELECT ID, Name, Description, Price FROM product"></asp:SqlDataSource>
     </p>
     <p>
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False">
             <AlternatingRowStyle BackColor="White" />
             <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
             <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
@@ -22,13 +22,15 @@
         </asp:GridView>
     </p>
     <p>
-        &nbsp;</p>
+        <asp:CheckBoxList ID="CheckBoxList1" runat="server" Width="415px">
+        </asp:CheckBoxList>
+    </p>
     <p>
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     </p>
     <p>
         
-            <asp:Button ID="addButton" runat="server" Text="Add To Cart" />
+            <asp:Button ID="addButton" runat="server" Text="Add To Cart" OnClick="addButton_Click" />
         
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="goToCartButton" runat="server" PostBackUrl="~/ShoppingCart.aspx" Text="Go to Cart" />
