@@ -20,7 +20,7 @@
     <table style="width:100%;">
         <tr>
             <td class="auto-style2">
-                <asp:Button ID="searchButton" runat="server" Text="Search" Width="175px" OnClick="searchButton_Click" PostBackUrl="~/SearchResults.aspx" />
+                <asp:Button ID="searchButton" runat="server" Text="Search" Width="175px" OnClick="searchButton_Click" />
             </td>
             <td class="auto-style111">
                 <asp:TextBox ID="searchTextBox" runat="server" style="margin-left: 0px" Width="350px"></asp:TextBox>

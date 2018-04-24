@@ -10,9 +10,6 @@
     <p>
         <asp:GridView ID="GridView1" runat="server" CellPadding="4" DataSourceID="new" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
-            <Columns>
-                <asp:CommandField SelectText="Add" ShowSelectButton="True" />
-            </Columns>
             <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
             <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
             <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
