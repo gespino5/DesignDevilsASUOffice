@@ -39,7 +39,7 @@ namespace WebApplication1
 
         public override string ToString()
         {
-            return $"{recNumber} {Id} {Name} {Description} {Price}";
+            return $"{recNumber}\t {Id}\t {Name} {Description} {Price}";
         }
     }
 }

@@ -147,6 +147,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="HomePage.aspx" />
     <Content Include="Image\DesignBanner.png" />
+    <Content Include="Image\NewLogo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

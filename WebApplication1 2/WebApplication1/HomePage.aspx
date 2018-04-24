@@ -8,7 +8,7 @@
             width: 205px;
         }
     .auto-style111 {
-        width: 476px;
+        width: 622px;
     }
     </style>
 </asp:Content>
@@ -24,6 +24,7 @@
             </td>
             <td class="auto-style111">
                 <asp:TextBox ID="searchTextBox" runat="server" style="margin-left: 0px" Width="350px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="validator" runat="server" ControlToValidate="searchTextBox" ErrorMessage="Enter Search Term"></asp:RequiredFieldValidator>
             </td>
             <td>
                 <em>e.g. product id, product name, description</em></td>

@@ -26,7 +26,7 @@
     </style>
 </head>
 <body>
-    <asp:Image ID="bannerImage" runat="server" ImageUrl="~/Image/DesignBanner.png" Height="229px" style="margin-bottom: 0px" Width="619px" />
+    <asp:Image ID="bannerImage" runat="server" ImageUrl="~/Image/NewLogo.png" Height="229px" style="margin-bottom: 0px" Width="619px" />
     <table class="auto-style99">
             <tr>
                 <td class="auto-style1">&nbsp;</td>

@@ -63,7 +63,7 @@
                 <asp:Button ID="continueButton" runat="server" Text="Continue Shopping" PostBackUrl="~/HomePage.aspx" Width="241px" />
             </td>
             <td class="auto-style101">
-                <asp:Button ID="cancelButton" runat="server" Text="Cancel" Width="154px" />
+                <asp:Button ID="cancelButton" runat="server" Text="Cancel" Width="154px" PostBackUrl="~/HomePage.aspx" />
             </td>
             <td>
                 <asp:Button ID="submitButton" runat="server" Text="Submit Order" Width="179px" CssClass="auto-style102" ForeColor="Black" />

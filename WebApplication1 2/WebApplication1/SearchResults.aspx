@@ -5,17 +5,15 @@
     <p>
         Search Results....</p>
     <p>
-        <asp:SqlDataSource ID="new" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" ProviderName="<%$ ConnectionStrings:ConnectionString2.ProviderName %>" SelectCommand="SELECT ID, Name, Description, Price FROM product"></asp:SqlDataSource>
-    </p>
+        &nbsp;</p>
     <p>
         &nbsp;</p>
     <p>
-        <asp:CheckBoxList ID="CheckBoxList1" runat="server" Width="415px">
+        <asp:CheckBoxList ID="CheckBoxList1" runat="server" Width="1032px">
         </asp:CheckBoxList>
     </p>
     <p>
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-    </p>
+        &nbsp;</p>
     <p>
         
             <asp:Button ID="addButton" runat="server" Text="Add To Cart" OnClick="addButton_Click" />

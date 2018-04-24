@@ -20,12 +20,21 @@ namespace WebApplication1
 
         protected void searchButton_Click(object sender, EventArgs e)
         {
-            string valuetoSearch = "";
+            if (searchTextBox.Text != "")
+            {
+                string valuetoSearch = "";
 
-            valuetoSearch = searchTextBox.Text;
-            Session["SearchValue"] = $"{valuetoSearch}";
+                valuetoSearch = searchTextBox.Text;
+                Session["SearchValue"] = $"{valuetoSearch}";
 
-            Response.Redirect("SearchResults.aspx", true);
+                searchTextBox.Text = "";
+
+                Response.Redirect("SearchResults.aspx", true);
+
+                
+            }
+            else
+                return;
 
         }
 

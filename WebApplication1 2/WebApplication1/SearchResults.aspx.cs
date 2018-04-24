@@ -34,29 +34,28 @@ namespace WebApplication1
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //if(CheckBoxList1.Items.Count > 0)
+            //{
+            //    CheckBoxList1.ClearSelection.;
+            //}
             Globals.conn.Open();
             sValue = (string)Session["SearchValue"];
             //searchData(sValue);
 
             
 
-            string query = $"SELECT * FROM groupa03.product Where Name LIKE '%{sValue}%'";
+            string query = $"SELECT * FROM groupa03.product Where Name LIKE '%{sValue}%' OR RecNumber LIKE '%{sValue}%' OR ID LIKE '%{sValue}%' OR Description Like '%{sValue}%' OR Price LIKE '%{sValue}%'";
 
             var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
             var reader = cmd.ExecuteReader();
-
-            Label1.Text = String.Empty;
-            product = new Product();
             
-            //int[] priceArray = new int[10];
-            //int count = 0;
-            //int cellCount = 1;
             productList = new BindingList<Product>();
             while (reader.Read())
             {
+                product = new Product();
                 //string tmpAdd = "";
                 //int tmpNum;
-                
+
 
                 var price = reader["price"]; // get data from the title column
                 var name = reader["Name"];
@@ -70,26 +69,21 @@ namespace WebApplication1
                 product.Id = Convert.ToInt32(id);
 
                 productList.Add(product);
-
-
-
-
-
-
-                //tmpAdd += $"{recNumber} {id} {name} {description} {price}<br>";
                 
-                //tmpNum = Convert.ToInt32(price);
-                //priceArray[count++] = tmpNum;
                 
-                //Label1.Text += $"{tmpNum}<br>";
             }
 
-            foreach(Product p in productList)
-            {
-                CheckBoxList1.Items.Add(p.ToString());
-            }
-            
             reader.Close();
+            
+
+            if (!IsPostBack == true)
+            {
+                foreach (Product p in productList)
+                {
+                    CheckBoxList1.Items.Add(p.ToString());
+                }
+            }
+
 
 
         }
@@ -100,19 +94,26 @@ namespace WebApplication1
 
         protected void addButton_Click(object sender, EventArgs e)
         {
+
+
             int tmpNum;
             selectedItems = new BindingList<Product>();
             for (int i = 0; i < CheckBoxList1.Items.Count; i++)
             {
-                if (CheckBoxList1.Items[i].Selected == true)
-                {
-                    tmpNum = CheckBoxList1.SelectedIndex;
-                    selectedItems.Add(productList[tmpNum]);
-                }
-                else
-                    return;
+                //if (CheckBoxList1.Items[i].Selected == true)
+                //{
+
+                //    string query = $"Insert Into Cart Values {product.RecNumber}";
+
+                //    var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
+                //    var reader = cmd.ExecuteReader();
+
+
+                //}
+                
                 
             }
+           
             tmpCart = new ShoppingCart();
             tmpCart.LoadList(selectedItems);
             

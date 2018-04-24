@@ -10,16 +10,19 @@ namespace WebApplication1
 {
     public partial class ShoppingCart : System.Web.UI.Page
     {
-        BindingList<Product> tmpBinding = new BindingList<Product>();
+        BindingList<Product> tmpBinding;
         
-
         protected void Page_Load(object sender, EventArgs e)
         {
+           
 
+            Label5.Text = "";
+            tmpBinding = new BindingList<Product>();
             foreach (Product p in tmpBinding)
             {
-                
+
                 shoppingCartListBox.Items.Add(p.ToString());
+                //Label5.Text += p.ToString();
             }
         }
 
@@ -30,6 +33,7 @@ namespace WebApplication1
 
         public void LoadList(BindingList<Product> p)
         {
+            tmpBinding = new BindingList<Product>();
             tmpBinding = p;
         }
     }
